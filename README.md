@@ -38,7 +38,7 @@ GOOGLE_APPLICATION_CREDENTIALS = C:\Users\Gabriel Osorno\Downloads\Firebase_HMS.
 - Now you can test creating some users and use some Front-end to get your auth-token to keep testing!
 
 ## STAGE 2
-In this stage, I will create all the endpoints that users can acces to.
+In this stage, I will create all the endpoints that users can access to.
 ![image](https://user-images.githubusercontent.com/113383541/209158237-712f47ab-17b8-4638-93e0-88247e434c51.png)
 
 ## STAGE 1
