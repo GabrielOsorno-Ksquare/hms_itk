@@ -35,6 +35,28 @@ DoctorRouter.post(
         username,
       } = req.body;
 
+      if (!birthdate) {
+        return res.status(400).send({ message: 'Missing birthdate.' });
+      }
+      if (!degree) {
+        return res.status(400).send({ message: 'Missing degree.' });
+      }
+      if (!email) {
+        return res.status(400).send({ message: 'Missing email.' });
+      }
+      if (!first_name) {
+        return res.status(400).send({ message: 'Missing first_name.' });
+      }
+      if (!last_name) {
+        return res.status(400).send({ message: 'Missing last_name.' });
+      }
+      if (!password) {
+        return res.status(400).send({ message: 'Missing password.' });
+      }
+      if (!username) {
+        return res.status(400).send({ message: 'Missing username.' });
+      }
+
       const firebaseUserId = await createFirebaseUser(
         username,
         email,

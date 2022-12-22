@@ -31,6 +31,22 @@ AppointmentRouter.post(
         title
       );
 
+      if (!date) {
+        return res.status(400).send({ message: 'Missing date.' });
+      }
+      if (!description) {
+        return res.status(400).send({ message: 'Missing description.' });
+      }
+      if (!doctor_id) {
+        return res.status(400).send({ message: 'Missing doctor_id.' });
+      }
+      if (!patient_id) {
+        return res.status(400).send({ message: 'Missing patient_id.' });
+      }
+      if (!title) {
+        return res.status(400).send({ message: 'Missing title.' });
+      }
+
       if (newAppointment) {
         return res.status(201).send(newAppointment);
       } else {
@@ -185,6 +201,10 @@ AppointmentRouter.patch(
     try {
       const id: number = Number(req.params.id);
       const { date } = req.body;
+
+      if (!date) {
+        return res.status(400).send({ message: 'Missing date.' });
+      }
 
       const updatedAppointment = await updateAppointment(id, date);
 
